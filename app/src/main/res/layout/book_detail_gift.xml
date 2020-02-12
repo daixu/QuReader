@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/payTourLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvPayTour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="打赏"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/txt_size_h4"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPayTourCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="礼物"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableRight="@drawable/item_arrow"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="前去送礼"
+                android:textColor="@color/primary_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.shangame.fiction.widget.GiftCarouselSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+
+        <include layout="@layout/gift_carousel" />
+
+        <include layout="@layout/gift_carousel" />
+
+    </com.shangame.fiction.widget.GiftCarouselSwitcher>
+</LinearLayout>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F7F8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_default_cover"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="@dimen/statusbar_view_height"
+                android:layout_marginRight="16dp"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/img_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:contentDescription="@string/app_name"
+                    android:padding="10dp"
+                    android:src="@drawable/image_message" />
+
+                <ImageView
+                    android:id="@+id/img_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:padding="10dp"
+                    android:src="@drawable/image_setting" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_user_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frameLayout"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image_user_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/default_head"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/text_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/to_login"
+                    android:textColor="#000000"
+                    android:textSize="19sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rect_white_bg"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:id="@+id/layout_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/img_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_recharge" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/layout_recharge"
+                android:layout_toLeftOf="@id/layout_recharge"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_account_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="#ff003233"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="账户余额"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_coin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="#ff003233"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="我的赠币"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_sales_entrance_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rect_white_bg"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            tools:targetApi="lollipop">
+
+            <RelativeLayout
+                android:id="@+id/layout_sign"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/item_bg">
+
+                <ImageView
+                    android:id="@+id/img_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_sign" />
+
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@id/img_sign"
+                    android:layout_toRightOf="@id/img_sign"
+                    android:gravity="center_vertical"
+                    android:text="@string/sign_in"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_size_h4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:text="签到领奖"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_invitation_code"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/item_bg">
+
+                <ImageView
+                    android:id="@+id/img_invitation_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_invitation_code_item" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@id/img_invitation_code"
+                    android:layout_toRightOf="@id/img_invitation_code"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:gravity="center_vertical"
+                    android:text="邀请码"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_size_h4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_scan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/item_bg">
+
+                <ImageView
+                    android:id="@+id/img_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_scan" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@id/img_scan"
+                    android:layout_toRightOf="@id/img_scan"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:gravity="center_vertical"
+                    android:text="扫一扫"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_size_h4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_service"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/item_bg">
+
+                <ImageView
+                    android:id="@+id/img_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_service" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@id/img_service"
+                    android:layout_toRightOf="@id/img_service"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:gravity="center_vertical"
+                    android:text="客服"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_size_h4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_help"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/item_bg">
+
+                <ImageView
+                    android:id="@+id/img_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_help" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toEndOf="@id/img_help"
+                    android:layout_toRightOf="@id/img_help"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:gravity="center_vertical"
+                    android:text="@string/help_center"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/txt_size_h4" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

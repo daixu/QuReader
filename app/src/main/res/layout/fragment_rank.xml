@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
+
+        <RadioButton
+            android:id="@+id/tv_rank_click"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rank_circle_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/rank_click"
+            android:textColor="@drawable/text_clickable_bg"
+            android:textSize="@dimen/txt_size_h3" />
+
+        <RadioButton
+            android:id="@+id/tv_rank_collect"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/rank_circle_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rank_collect"
+            android:textColor="@drawable/text_clickable_bg"
+            android:textSize="@dimen/txt_size_h3" />
+
+        <RadioButton
+            android:id="@+id/tv_rank_gift"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/rank_circle_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rank_gift"
+            android:textColor="@drawable/text_clickable_bg"
+            android:textSize="@dimen/txt_size_h3" />
+
+        <RadioButton
+            android:id="@+id/tv_rank_hot_sell"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/rank_circle_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/rank_hot_sell"
+            android:textColor="@drawable/text_clickable_bg"
+            android:textSize="@dimen/txt_size_h3" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

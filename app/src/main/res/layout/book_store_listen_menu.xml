@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/menu_rank_listen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/icon_rank"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="排行"
+        android:textColor="#ff363636"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/menu_free_listen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/icon_free_listen"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="免费"
+        android:textColor="#ff363636"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/menu_complete_listen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/icon_full"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="全本"
+        android:textColor="#ff363636"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/menu_end_listen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/icon_end"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="完结"
+        android:textColor="#ff363636"
+        android:textSize="13sp" />
+</LinearLayout>

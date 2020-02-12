@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="#FFF9F1">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:padding="16dp"
+            android:src="@drawable/public_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="#ff1a1f24"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#FFF9F1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="#ff4d4d4d"
+                        android:textSize="38sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阅读币"
+                        android:textColor="#ff9d9d9d"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="#ff4d4d4d"
+                        android:textSize="38sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="赠币"
+                        android:textColor="#ff9d9d9d"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/image_recharge_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="42dp"
+                    android:text="请选择充值金额"
+                    android:textColor="#ff999999"
+                    android:textSize="14sp" />
+
+                <com.shangame.fiction.widget.MyGridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:horizontalSpacing="16dp"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_gift_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/item_bg"
+                    android:drawableStart="@drawable/icon_coin"
+                    android:drawableLeft="@drawable/icon_coin"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:text="我的赠币"
+                    android:textColor="#414141"
+                    android:textSize="@dimen/txt_size_h4" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#E7EBF1" />
+
+                <TextView
+                    android:id="@+id/tv_recharge_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/item_bg"
+                    android:drawableStart="@drawable/icon_recharge"
+                    android:drawableLeft="@drawable/icon_recharge"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:text="充值消费记录"
+                    android:textColor="#414141"
+                    android:textSize="@dimen/txt_size_h4" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#E7EBF1" />
+
+                <TextView
+                    android:id="@+id/tv_reward_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/item_bg"
+                    android:drawableStart="@drawable/icon_reward_item"
+                    android:drawableLeft="@drawable/icon_reward_item"
+                    android:drawableEnd="@drawable/item_arrow"
+                    android:drawableRight="@drawable/item_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:text="打赏记录"
+                    android:textColor="#414141"
+                    android:textSize="@dimen/txt_size_h4" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#E7EBF1" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

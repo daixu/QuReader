@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/menu_classify"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/menu_classify"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/txt_size_h2"
+        android:gravity="center"
+        android:text="分类" />
+
+    <TextView
+        android:id="@+id/menu_new_book"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/menu_new_book"
+        android:textSize="@dimen/txt_size_h2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/primary_text"
+        android:gravity="center"
+        android:text="新书" />
+
+    <TextView
+        android:id="@+id/menu_booklist"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_h2"
+        android:drawableTop="@drawable/menu_booklist"
+        android:textColor="#666666"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="书单" />
+
+    <TextView
+        android:id="@+id/menu_end"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_size_h2"
+        android:drawableTop="@drawable/menu_end"
+        android:textColor="#666666"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="完本" />
+
+
+    <TextView
+        android:id="@+id/menu_red"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/menu_red"
+        android:textSize="@dimen/txt_size_h2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/primary_text"
+        android:gravity="center"
+        android:text="福利" />
+</LinearLayout>

@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/fake_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:background="#822E30" />
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="听书"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size" />
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="true">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="#822E30"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:alpha="0.3"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/rect_white_normal_bg"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/text_sort"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_search"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableStart="@drawable/icon_search"
+                            android:drawableLeft="@drawable/icon_search"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="搜索感兴趣的作品和作者"
+                            android:textColor="#ffffffff"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/text_sort"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_sort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawableStart="@drawable/icon_sort_1"
+                            android:drawableLeft="@drawable/icon_sort_1"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="分类"
+                            android:textColor="#ffffffff"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/image_banner_bottom_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="-2dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bg_book_store_bottom" />
+                </RelativeLayout>
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="-120dp"
+                    android:layout_marginRight="15dp"
+                    app:canLoop="true" />
+
+                <include layout="@layout/book_store_listen_menu" />
+
+                <LinearLayout
+                    android:id="@+id/kindLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/book_store_must_listen" />
+
+                    <include layout="@layout/book_store_discount_area" />
+
+                    <ScrollView
+                        android:id="@+id/sl_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:id="@+id/adContainer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal" />
+                    </ScrollView>
+
+                    <include layout="@layout/book_store_serialized_latest" />
+
+                    <include layout="@layout/book_store_girl_boutique" />
+
+                    <ScrollView
+                        android:id="@+id/sl_first2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:id="@+id/adContainer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal" />
+                    </ScrollView>
+
+                    <include layout="@layout/book_store_boy_boutique" />
+
+                    <include layout="@layout/book_store_other_listen" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center"
+                        android:background="#FDEBDC"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/icon_refresh"
+                            android:drawableLeft="@drawable/icon_refresh"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:text="换一批"
+                            android:textColor="#fffa9543"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

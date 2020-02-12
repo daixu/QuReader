@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_book_info"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:background="#F9F8F5"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/layout_right"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_read"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读时间"
+                android:textColor="#ff40434a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_today_read_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0分钟"
+                android:textColor="#fff09c55"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_welfare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:src="@drawable/img_welfare" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已连签"
+                android:textColor="#ff40434a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_sign_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0天"
+                android:textColor="#fff09c55"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/image_sign_reward" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@id/layout_right"
+        android:layout_toLeftOf="@id/layout_right"
+        android:background="#CFCFCF" />
+
+    <LinearLayout
+        android:id="@+id/layout_recommend_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@id/view_line"
+        android:layout_toLeftOf="@id/view_line">
+
+        <ImageView
+            android:id="@+id/img_recommend_book"
+            android:layout_width="55dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/default_cover" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="每日推荐"
+                android:textColor="#fff09c55"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_book_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#3C3F46"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_book_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#999999" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

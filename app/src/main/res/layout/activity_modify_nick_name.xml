@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/public_title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/etNickName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rect_white_bg"
+            android:gravity="center_vertical|start"
+            android:imeOptions="actionSearch"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center_vertical|end"
+            android:padding="16dp"
+            android:src="@drawable/clear_icon" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/hint_nick_name1"
+        android:textColor="@color/secondary_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/hint_nick_name2"
+        android:textColor="@color/secondary_text" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/helf_round_theme_bg"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_h4" />
+</LinearLayout>
