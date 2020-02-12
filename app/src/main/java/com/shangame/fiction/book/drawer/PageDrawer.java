@@ -9,49 +9,27 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Region;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.bytedance.sdk.openadsdk.AdSlot;
-import com.bytedance.sdk.openadsdk.TTAdNative;
-import com.bytedance.sdk.openadsdk.TTFeedAd;
-import com.bytedance.sdk.openadsdk.TTNativeAd;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 import com.fiction.bar.R;
-import com.shangame.fiction.ad.ADConfig;
-import com.shangame.fiction.ad.FeedAdBean;
 import com.shangame.fiction.ad.ReadADLoader;
-import com.shangame.fiction.ad.TTAdManagerHolder;
-import com.shangame.fiction.ad.TTNativeExpressAdBean;
 import com.shangame.fiction.book.config.PageConfig;
 import com.shangame.fiction.book.helper.FontHelper;
 import com.shangame.fiction.book.helper.PaintHelper;
 import com.shangame.fiction.book.page.Line;
 import com.shangame.fiction.book.page.PageData;
-import com.shangame.fiction.core.utils.BitmapUtils;
 import com.shangame.fiction.core.utils.ScreenUtils;
-import com.shangame.fiction.storage.manager.FileManager;
 import com.shangame.fiction.ui.reader.BatteryReceiver;
-import com.shangame.fiction.widget.GlideApp;
 
-import java.io.File;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
-import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
 import notchtools.geek.com.notchtools.NotchTools;
 
 /**

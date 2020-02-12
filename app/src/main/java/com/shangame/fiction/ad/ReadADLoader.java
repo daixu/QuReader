@@ -91,6 +91,7 @@ public class ReadADLoader {
                     return;
                 }
 
+                adContainer.removeAllViews();
                 // adLoadCallback.onADLoaded(ads);
                 TTNativeExpressAd ad = ads.get(0);
                 // ad.setSlideIntervalTime(30 * 1000);
